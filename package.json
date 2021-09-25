@@ -1,0 +1,31 @@
+{
+  "name": "vermicelli_shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huyphamkma/Vermicelli_shop.git"
+  },
+  "author": "huy.pq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huyphamkma/Vermicelli_shop/issues"
+  },
+  "homepage": "https://github.com/huyphamkma/Vermicelli_shop#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.0.7",
+    "mongoose-slug-generator": "^1.0.4"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-sass": "^6.0.1"
+  }
+}
