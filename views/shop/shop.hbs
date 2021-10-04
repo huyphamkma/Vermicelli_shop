@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="row pt-5">
+            <div class="col-lg-2">
+                <div class="slidebar">
+                    <div class="slidebar-top ml-3">
+                        <div class="slide-bar-title">
+                            <span class="title-text">
+                                Vermicelli Cattery
+                            </span>
+                            <div class="line-title"></div>
+                        </div>
+                        <div class="slide-bar-top-content">
+                            <a href="https://www.facebook.com/nga.nguyen2303" class="text-decoration-none text-dark d-block">
+                                    <i class="fab fa-facebook-f fa-lg fa-fw p-1"></i>
+                                    <span>Facebook</span>
+                            </a>
+                            <p class="top-title-content">
+                                <i class="fa fa-phone fa-fw"></i>
+                                <a href="tel:098999616" class="text-dark text-decoration-none">098999616</a>
+                            </p>
+                            <p class="top-title-content">
+                                <i class="fa fa-envelope fa-fw"></i>
+                                <a href="mailto:nga.nguyenthi2303@gmail.com" class="text-dark text-decoration-none">nga.nguyenthi2303@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slide-bar-bottom">
+
+                        <div class="slide-bar-bottom-content">
+                            <nav class="navbar navbar-expand-lg navbar-light rounded-0 d-flex flex-column text-left">
+                                <div class="row w-100 d-flex justify-content-between align-items-center">
+                                    <div class="slide-bar-title">
+                                        <span class="title-text">
+                                            Categories
+                                        </span>
+                                        <div class="line-title ml-n2"></div>
+                                    </div>
+                                    <div class="line-title"></div>
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                        data-target="#category" aria-controls="navbarSupportedContent"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                </div>
+
+                                <div class="row w-100">
+                                    <div class="collapse navbar-collapse pt-2" id="category">
+                                        <ul class="nav navbar-nav d-block">
+                                            {{#each breeds}}
+                                            <li class="navbar-item">
+                                                <a href="/shop/categories/{{this}}" class="nav-link category-item text-dark">Giống {{this}}</a>
+                                            </li>
+                                            {{!-- <li class="navbar-item">
+                                                <a href="#" class="nav-link category-item text-dark">Giống mèo B</a>
+                                            </li>
+                                            <li class="navbar-item">
+                                                <a href="#" class="nav-link category-item text-dark">Giống mèo C</a>
+                                            </li> --}}
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="row">
+                    {{#each cats}}
+                    <div class="col-md-3 mb-5">
+                        <div class="card product-wrap shadow">
+                            <img src="{{this.img1}}" alt="" class="card-img img-fluid img-responsive">
+                            <div class="card-body text-center">
+                                <a href="/shop/detail/{{this.slug}}"
+                                    class="h3 text-decoration-none text-dark stretched-link">{{this.name}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        {{!-- <div class="row justify-content-center mt-4">
+            <ul class="pagination pagination-lg">
+                <li class="page-item ">
+                    <a class="page-link rounded-0 mr-3 border-top-0 border-left-0 bg-dark text-light" href="#"
+                        tabindex="-1">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link rounded-0 mr-3 border-top-0 border-left-0 bg-dark text-light" href="#">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link rounded-0 mr-3 border-top-0 border-left-0 bg-dark text-light" href="#">3</a>
+                </li>
+            </ul>
+        </div>
+        --}}
+
+        <div class="row justify-content-center mt-4">
+            {{{pagination current pages path}}}
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

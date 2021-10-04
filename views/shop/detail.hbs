@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="product-detail-content pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 pb-5">
+                    <div class="card mb-4">
+                        <img id="product-detail" src="{{cat.img1}}" alt="" class="card-img img-fluid">
+                    </div>
+                    <div class="row d-flex align-items-center">
+                        {{!-- <div class="col-1">
+                            <a href="#multi-item" role="button" data-slide="prev">
+                                <i class="text-dark fas fa-chevron-left"></i>
+                            </a>
+                        </div> --}}
+                        <!--Start Carousel Wrapper-->
+                        <div id="multi-item" class="col-10 carousel slide carousel-multi-item" data-ride="carousel">
+                            <div class="carousel-inner product-links-wap" role="listbox">
+                                <!--First slide-->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#" onclick="return false" class="d-block">
+                                                <img src="{{cat.img1}}" alt="" class="card-img img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" onclick="return false" class="d-block">
+                                                <img src="{{cat.img2}}" alt="" class="card-img img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" onclick="return false" class="d-block">
+                                                <img src="{{cat.img3}}" alt="" class="card-img img-fluid">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        {{!-- <div class="col-1">
+                            <a href="#multi-item" role="button" data-slide="next">
+                                <i class="text-dark fas fa-chevron-right"></i>
+                            </a>
+                        </div> --}}
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card rounded-0 border-0 card-content">
+                        <div class="detail-cat-name">
+                            <h2 class="display-5">{{cat.name}}</h2>
+                        </div>
+                        <div class="detail-cat">
+                            <p>
+                                <span style="text-decoration: underline; margin-right: 10px">Giống mèo:</span>
+                                <span style="font-size: 18px;">{{cat.breed}}</span>
+                            </p>
+                        </div>
+                        <div class="detail-cat">
+                            <p>
+                                <span style="text-decoration: underline; margin-right: 10px">Giới tính:</span>
+                                <span style="font-size: 18px;">{{cat.gender}}</span>
+                            </p>
+                        </div>
+                        <div class="detail-cat detail-cat-old">
+                            <p>
+                                <span style="text-decoration: underline; margin-right: 10px">Ngày sinh:</span>
+                                <span style="font-size: 18px;">{{cat.birthday}}</span>
+                            </p>
+                        </div>
+                        <p style="font-weight: 800; font-size: 16px;">Khách hàng hoàn toàn an tâm khi mua mèo của chúng
+                            tôi vì:</p>
+                        <p>- Mèo con có nguồn gốc rõ ràng. Được kiểm tra nghiêm ngặt về sức khỏe mới giao cho khách
+                            hàng.</p>
+                        <p>- Tiêm phòng, tẩy giun đầy đủ.</p>
+                        <p>- Tư vấn chăm sóc, nuôi mèo con trọn đời.</p>
+                        <p style="font-weight: 800;">Hãy liên hệ chúng tôi để có thêm thông tin về bé mèo:</p>
+                        <p>Facebook:  <a href="{{cat.fb}}" class="text-dark" style="margin-left: 10px;">{{cat.fb}}</a></p>
+                        <p>Zalo - Hotline: 098999616</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show image when click on slide item
+        var item_slide = document.querySelectorAll('.product-links-wap a')
+
+
+        for (const item of item_slide) {
+            item.addEventListener('click', function (e) {
+                var img_element = item.children[0]
+                var img_src_onClick = img_element.getAttribute('src')
+                var image_show = document.getElementById('product-detail')
+                image_show.src = img_src_onClick
+                return false
+            })
+        }
+    </script>
+</body>
+
+</html>

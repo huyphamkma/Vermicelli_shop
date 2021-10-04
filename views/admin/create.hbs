@@ -1,0 +1,47 @@
+<div class="container my-5">
+
+        <h3>Thêm mới mèo</h3>
+        <form action="/admin/create" method="POST">
+            <div class="form-group">
+                <label for="name" style="min-width: 100px;">Tên mèo</label>
+                <input type="text" name="name" class="form-group" id="name" placeholder="Nhập tên mèo">
+            </div>
+            <div class="form-group">
+                <label for="breed" style="min-width: 100px;">Giống</label>
+                <input type="text" name="breed" class="form-group" id="breed" placeholder="Nhập giống">
+            </div>
+            <div class="form-group">
+                <label for="birthday" style="min-width: 100px;">Ngày sinh</label>
+                <input type="date" name="birthday" class="form-group" id="birthday" placeholder="Nhập ngày sinh">
+            </div>
+            <div class="form-group">
+                <label for="gender-input">Giới tính</label>
+                <select name="gender" class="form-control" id="gender-input">
+                    <option value="">--Chọn giới tính--</option>
+                    <option value="male">Đực</option>
+                    <option value="female">Cái</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fb" style="min-width: 100px;">Đường dẫn FB</label>
+                <input style="width: 100%;" type="text" name="fb" class="form-group" id="fb"
+                    placeholder="Nhập link bài viết trên FB">
+            </div>
+            <div class="form-group">
+                <label for="img1" style="min-width: 100px;">Ảnh 1</label>
+                <input style="width: 100%;" type="text" name="img1" class="form-group" id="img1"
+                    placeholder="Nhập link ảnh 1">
+            </div>
+            <div class="form-group">
+                <label for="img2" style="min-width: 100px;">Ảnh 2</label>
+                <input style="width: 100%;" type="text" name="img2" class="form-group" id="img2"
+                    placeholder="Nhập link ảnh 2">
+            </div>
+            <div class="form-group">
+                <label for="img3" style="min-width: 100px;">Ảnh 3</label>
+                <input style="width: 100%;" type="text" name="img3" class="form-group" id="img3"
+                    placeholder="Nhập link ảnh 3">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>

@@ -1,0 +1,125 @@
+<div class="mt-4">
+    <div class="d-flex">
+        <a href="/admin/create"  class="btn btn-primary m-auto text-light">Thêm mèo mới</a>
+    </div>
+
+    <div class="container">
+
+        <form name="form-data" action="/admin/handle-form-action" method="POST">
+            <div class="mt-4 d-flex align-items-center">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkbox-all">
+                    <label class="form-check-label" for="checkbox-all">
+                        Check all
+                    </label>
+                </div>
+
+                <select class="form-control form-control-sm w-25" name="action" required>
+                    <option value="">-- Select action--</option>
+                    <option value="delete">Delete</option>
+                </select>
+
+                <button class="btn btn-primary btn-sm" disabled id="btn-apply">Apply</button>
+            </div>
+
+            <div class="table-sm mt-5">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Index</th>
+                            <th scope="col">
+                                Tên
+                                {{{sortable 'name' _sort}}}
+                                {{!-- <a href="?_sort&column=name&type=desc"><span class="oi oi-elevator"></span></a>
+                                --}}
+                            </th>
+                            <th scope="col">
+                                Giống
+                                {{{sortable 'description' _sort}}}
+                            </th>
+                            <th scope="col">Ngày sinh</th>
+                            <th scope="col">Giới tính</th>
+                            <th scope="col">Ảnh</th>
+                            <th scope="col"></th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each cats}}
+                        <tr>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="catsIds[]"
+                                        value="{{this._id}}">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                    </label>
+                                </div>
+                            </td>
+                            <th scope="row">{{sum @index 1}}</th>
+                            <td>{{this.name}}</td>
+                            <td>{{this.breed}}</td>
+                            <td>{{this.birthday}}</td>
+                            <td>{{this.gender}}</td>
+                            <td><img src="{{this.img1}}" alt="" style="width: 80px; height: 80px;"></td>
+                            <td>
+                                <a href="/admin/edit/{{this._id}}" class="btn btn-link">Edit</a>
+                            </td>
+                            <td>
+                                <a href="" class="btn btn-link" data-toggle="modal" data-target="#deleteModal"
+                                    data-id="{{this._id}}">Delete</a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+{{!-- Confirm delete --}}
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Xoá mèo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Có chắc chắn muốn xoá con mèo này ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
+                <button type="button" class="btn btn-primary" id="btn-delete-course">Xoá</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form method="POST" name="delete-form"></form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var courseId
+        var btnDeleteCourse = document.getElementById('btn-delete-course')
+        var deleteForm = document.forms['delete-form']
+
+        $('#deleteModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget)
+            courseId = button.data('id')
+
+        })
+
+
+        btnDeleteCourse.onclick = function () {
+            deleteForm.action = '/admin/' + courseId + '?_method=DELETE'
+            deleteForm.submit()
+        }
+    })
+</script>
