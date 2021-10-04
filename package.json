@@ -26,9 +26,5 @@
     "mongoose": "^6.0.7",
     "mongoose-slug-generator": "^1.0.4",
     "nodemailer": "^6.6.5"
-  },
-  "devDependencies": {
-    "morgan": "^1.10.0",
-    "node-sass": "^6.0.1"
   }
 }

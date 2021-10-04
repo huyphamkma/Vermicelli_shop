@@ -1,6 +1,5 @@
 const path = require('path')
 const express = require('express')
-const morgan = require('morgan')
 const handlebar = require('express-handlebars')
 const methodOverride = require('method-override')
 const db = require('./models/index')
