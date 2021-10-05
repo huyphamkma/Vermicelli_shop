@@ -1,0 +1,41 @@
+{{!-- <div class="slide-bar-bottom">
+
+                        <div class="slide-bar-bottom-content">
+                            <nav
+                                class="navbar navbar-expand-lg navbar-light rounded-0 d-flex flex-column text-left p-0">
+                                <div class="w-100 m-0">
+                                    <div class="slide-bar-title">
+                                        <span class="title-text">
+                                            Categories
+                                        </span>
+                                        {{!-- <div class="line-title ml-n2 m-0"></div> --}}
+                                    </div>
+                                    {{!-- <div class="line-title"></div> --}}
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                        data-target="#category" aria-controls="navbarSupportedContent"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                </div>
+
+                                <div class="row w-100 m-0">
+                                    <div class="collapse navbar-collapse pt-2" id="category">
+                                        <ul class="nav navbar-nav d-block">
+                                            {{#each breeds}}
+                                            <li class="navbar-item">
+                                                <a href="/shop/categories/{{this}}"
+                                                    class="nav-link category-item text-dark">Giống {{this}}</a>
+                                            </li>
+                                            {{!-- <li class="navbar-item">
+                                                <a href="#" class="nav-link category-item text-dark">Giống mèo B</a>
+                                            </li>
+                                            <li class="navbar-item">
+                                                <a href="#" class="nav-link category-item text-dark">Giống mèo C</a>
+                                            </li> --}}
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div> --}}
