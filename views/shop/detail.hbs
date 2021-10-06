@@ -9,7 +9,25 @@
 </head>
 
 <body>
-    <div class="product-detail-content pt-5">
+    <ul class="nav nav-pills nav-fill justify-content-center bg-secondary">
+        <li class="nav-item">
+            <a class="nav-link text-light" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="/shop">Shop</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="/contact">Contact</a>
+        </li>
+    </ul>
+
+
+
+  
+
+
+
+    <div class="product-detail-content pt-5" id="main">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 pb-5">
@@ -85,7 +103,8 @@
                         <p>- Tiêm phòng, tẩy giun đầy đủ.</p>
                         <p>- Tư vấn chăm sóc, nuôi mèo con trọn đời.</p>
                         <p style="font-weight: 800;">Hãy liên hệ chúng tôi để có thêm thông tin về bé mèo:</p>
-                        <p>Facebook:  <a href="{{cat.fb}}" class="text-dark" style="margin-left: 10px;">{{cat.fb}}</a></p>
+                        <p>Facebook: <a href="{{cat.fb}}" class="text-dark" style="margin-left: 10px;">{{cat.fb}}</a>
+                        </p>
                         <p>Zalo - Hotline: 098999616</p>
                     </div>
                 </div>
@@ -107,6 +126,7 @@
                 return false
             })
         }
+
     </script>
 </body>
 

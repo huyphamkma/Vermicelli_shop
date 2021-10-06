@@ -39,8 +39,22 @@ html {
     margin-left: 0;
 }
 
+/* .header {
+    background-image: url('/img/bg.png;');
+    height: 270px;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+} */
+
+
+
 .content {
     padding: 10px 0 40px;
+}
+
+.slidebar {
+    color: white;
 }
 
 .slide-bar-title {
@@ -51,7 +65,7 @@ html {
 
 .title-text {
     /* width: 100px; */
-    color: #212127;
+    /* color: #212127; */
     font-weight: 500;
     font-size: 20px;
     margin-right: 10px;
@@ -63,20 +77,20 @@ html {
     /* margin-right: 14px; */
 }
 
-.slide-bar-top-content {
+/* .slide-bar-top-content {
     padding-left: 8px;
     padding-top: 8px;
-}
+} */
 
 .top-title-content {
     color: var(--text);
     margin-top: 10px;
 }
 
-.slide-bar-bottom{
+/* .slide-bar-bottom{
     margin-top: 40px;
     margin-bottom: 30px;
-}
+} */
 
 
 .bottom-list{
@@ -85,6 +99,7 @@ html {
 
 .bottom-list-item{
     list-style: none;
+    font-size: 14px;
 }
 
 .bottom-list-item-link {
@@ -208,7 +223,7 @@ html {
     background-image: url('/img/cat_1.jpg');
 }
 
-@media screen and (max-width: 767px) {   
+@media screen and (max-width: 992px) {   
     #slide_1{
     	background-image: url('/img/cat_11.jpg');
         height: 600px;
@@ -219,7 +234,7 @@ html {
     background-image: url('/img/cat_2.jpg');
 }
 
-@media screen and (max-width: 767px) {   
+@media screen and (max-width: 992px) {   
     #slide_2{
     	background-image: url('/img/cat_22.jpg');
         height: 600px;
@@ -230,7 +245,7 @@ html {
     background-image: url('/img/cat_3.jpg');
 }
 
-@media screen and (max-width: 767px) {   
+@media screen and (max-width: 992px) {   
     #slide_3{
     	background-image: url('/img/cat_33.jpg');
         height: 600px;
@@ -244,4 +259,53 @@ html {
     background-size: contain;
     background-repeat: no-repeat;
     margin-left: 30px;
+}
+
+
+
+
+/* -------slide menu ----------- */
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+  }
+
+.closebtn {
+    top: 10px !important;
+    right: 250px !important;
 }
