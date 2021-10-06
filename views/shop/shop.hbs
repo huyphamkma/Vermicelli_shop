@@ -13,23 +13,23 @@
 
     <ul class="nav nav-pills nav-fill justify-content-center bg-secondary">
         <li class="nav-item">
-            <a class="nav-link text-light" href="/">Home</a>
+            <a class="nav-header nav-link text-light" href="/">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-light" href="/shop">Shop</a>
+            <a class="nav-header nav-link text-light" href="/shop">Shop</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-light" href="/contact">Contact</a>
+            <a class="nav-header nav-link text-light" href="/contact">Contact</a>
         </li>
-        <li class="nav-item d-flex align-items-center justify-content-center">
-            <span style="cursor:pointer" onclick="openNav()" class="text-light"><i class="fas fa-bars"></i> Menu</span>
+        <li class="nav-header nav-item">
+            <span style="cursor:pointer; font-size: 20px;" onclick="openNav()" class="text-light"><i class="fas fa-bars"></i> Menu</span>
         </li>
     </ul>
     <div id="mySidenav" class="sidenav bg-secondary">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="slidebar">
             <div class="slidebar-top ml-3">
-                <div class="slide-bar-title">
+                <div class="slide-bar-title mb-3">
                     <span class="title-text">
                         Vermicelli Cattery
                     </span>
@@ -55,7 +55,7 @@
                     </a>
                 </div>
             </div>
-            <div class="slide-bar-bottom">
+            <div class="slide-bar-bottom mt-5">
                 <div class="slide-bar-bottom-content ml-3">
                     <div class="slide-bar-title">
                         <span class="title-text">
@@ -83,11 +83,11 @@
 
 
 
-    <div class="content" id="main">
-        <div class="row pt-5">
+    <div class="shop-content" id="main">
+        <div class="row pt-3 mx-1">
             <div class="row">
                 {{#each cats}}
-                <div class="col-6 col-md-4 col-lg-3 p-2 mb-5" id="content-sceen">
+                <div class="col-6 col-md-4 col-lg-3 p-2 mb-3" id="content-sceen">
                     <div class="card product-wrap shadow">
                         <img src="{{this.img1}}" alt="" class="card-img img-fluid img-responsive">
                         <div class="card-body text-center">
