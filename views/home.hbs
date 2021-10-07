@@ -11,7 +11,7 @@
 
 <body>
 
-    <ul class=" nav nav-pills nav-fill justify-content-center bg-secondary">
+    {{!-- <ul class=" nav nav-pills nav-fill justify-content-center bg-secondary">
         <li class="nav-item">
             <a class="nav-header nav-link text-light" href="/">Home</a>
         </li>
@@ -21,8 +21,88 @@
         <li class="nav-item">
             <a class="nav-header nav-link text-light" href="/contact">Contact</a>
         </li>
-    </ul>
+    </ul> --}}
+    <span style="cursor:pointer; font-size: 20px;" onclick="openNav()" class="text-dark menu-slide"><i
+            class="fas fa-bars menu-icon"></i></span>
 
+
+    <div id="mySidenav" class="sidenav bg-secondary">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="slidebar">
+            <div class="slide-bar-bottom mt-5">
+                <div class="slide-bar-bottom-content ml-3">
+                    <div class="slide-bar-title">
+                        <span class="title-text">
+                            MENU
+                        </span>
+                        <div class="line-title"></div>
+                    </div>
+                    <div class="row w-100">
+                        <div class="pt-2" id="category">
+
+                            <a class="nav-header nav-link text-light" href="/">Home</a>
+
+                            <a class="nav-header nav-link text-light" href="/shop">Shop</a>
+
+                            <a class="nav-header nav-link text-light" href="/contact">Contact</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slidebar-top ml-3">
+                <div class="slide-bar-title mb-3">
+                    <span class="title-text">
+                        Vermicelli Cattery
+                    </span>
+                    <div class="line-title"></div>
+                </div>
+                <div class="slide-bar-top-content">
+                    <a href="https://www.facebook.com/nga.nguyen2303" class="text-decoration-none d-block text-light">
+                        <i class="fab fa-facebook-f fa-lg fa-fw p-1"></i>
+                        <span>Facebook</span>
+                    </a>
+
+
+                    <a href="tel:0989996916" class="text-decoration-none text-light">
+                        <i class="fa fa-phone fa-fw"></i>
+                        098 999 69 16
+                    </a>
+
+
+
+                    <a href="mailto:nga.nguyenthi2303@gmail.com" class="text-decoration-none text-light">
+                        <i class="fa fa-envelope fa-fw"></i>
+                        <span style="font-size: 14px;">nga.nguyenthi2303@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+            <div class="slide-bar-bottom mt-5">
+                <div class="slide-bar-bottom-content ml-3">
+                    <div class="slide-bar-title">
+                        <span class="title-text">
+                            Categories
+                        </span>
+                        <div class="line-title"></div>
+                    </div>
+                    <div class="row w-100">
+                        <div class="pt-2" id="category">
+
+                            <ul class="bottom-list">
+                                {{#each breeds}}
+                                <li class="bottom-list-item">
+                                    <a href="/shop/categories/{{this}}" class="text-light">Giống
+                                        {{this}}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="carouselIntro" class="carousel slide py-2" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -98,10 +178,12 @@
             <div class="d-flex flex-row">
                 <div class="left w-50">
                     <p style="font-weight: 400;">
-                        Tại <strong>Vermicelli Cattery</strong> chúng tôi cung cấp các giống mèo được nhân giống thuần chủng, 
-                        đầy đủ giấy tờ được tiêm phòng đầy đủ, tư vấn chăm sóc trọn đời. 
+                        Tại <strong>Vermicelli Cattery</strong> chúng tôi cung cấp các giống mèo được nhân giống thuần
+                        chủng,
+                        đầy đủ giấy tờ được tiêm phòng đầy đủ, tư vấn chăm sóc trọn đời.
                         Từ đó mang lại những bé mèo tốt nhất đến cho người mua.
-                    {{!-- <p class="mt-5" style="font-weight: 400;">
+                        {{!--
+                    <p class="mt-5" style="font-weight: 400;">
                         Chúng tôi cam kết tất cả mèo cung cấp trên trang đều được nhân giống thuần chủng, có đầy đủ giấy
                         tờ, được tiêm phòng đầy đủ,
                         tư vấn chăm sóc trọn đời.
@@ -113,6 +195,15 @@
             </div>
         </div>
     </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "300px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
 
 </body>
 

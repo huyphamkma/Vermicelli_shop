@@ -25,7 +25,7 @@ class shopController {
         let perPage = 8 // number of cat show on 1 page
         let page = req.params.page || 1
 
-        console.log(req.params)
+        // console.log(req.params)
         Cats.find({ breed: req.params.breed }).lean()
             .skip((perPage * page) - perPage)
             .limit(perPage)
@@ -74,7 +74,7 @@ class shopController {
     detail(req, res, next) {
         Cats.findOne({ slug: req.params.slug }).lean()
             .then(function (cat) {
-                res.render('shop/detail', { cat })
+                res.render('shop/detail', { cat: cat, breeds: breeds })
             })
             .catch(function (err) {
                 next(err)

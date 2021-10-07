@@ -1,12 +1,26 @@
 const Accounts = require('../models/accountModel')
 const jwtHelper = require('../ultils/jwtHelper')
 const nodemailer = require("nodemailer")
+const Cats = require('../models/catsModel')
 
+
+var breeds
 
 class siteController {
     // [GET]    /
     index(req, res, next) {
-        res.render('home')
+        Cats.find({}).lean()
+        .then(function (cats) {
+            breeds = cats.map(function (cat) {
+                return cat.breed
+            })
+            breeds = Array.from(new Set(breeds))    // CHỉ lấy những phần tử unique
+            res.render('home', {breeds: breeds})
+        })
+        .catch(function (err) {
+            next(err)
+        })
+        
     }
 
 

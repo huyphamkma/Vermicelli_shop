@@ -9,6 +9,7 @@ const Cats = new Schema({
     breed: {type: String, maxlength:50},
     birthday: {type: String, maxlength:20},
     gender: {type: String, maxlength:10},
+    intro: {type: String},
     fb: {type: String, maxlength:255},
     slug: {type: String, slug: 'name', unique: true},
     img1: {type: String, maxlength: 255},

@@ -1,15 +1,71 @@
-<ul class="nav nav-pills nav-fill justify-content-center bg-secondary">
-        <li class="nav-item">
-            <a class="nav-header nav-link text-light" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-header nav-link text-light" href="/shop">Shop</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-header nav-link text-light" href="/contact">Contact</a>
-        </li>
-    </ul>
+<span style="cursor:pointer; font-size: 20px;" onclick="openNav()" class="text-dark menu-slide"><i
+            class="fas fa-bars menu-icon"></i></span>
+
+
+    <div id="mySidenav" class="sidenav bg-secondary">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="slidebar">
+            <div class="slide-bar-bottom mt-5">
+                <div class="slide-bar-bottom-content ml-3">
+                    <div class="slide-bar-title">
+                        <span class="title-text">
+                            MENU
+                        </span>
+                        <div class="line-title"></div>
+                    </div>
+                    <div class="row w-100">
+                        <div class="pt-2" id="category">
+
+                            <a class="nav-header nav-link text-light" href="/">Home</a>
+
+                            <a class="nav-header nav-link text-light" href="/shop">Shop</a>
+
+                            <a class="nav-header nav-link text-light" href="/contact">Contact</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slidebar-top ml-3">
+                <div class="slide-bar-title mb-3">
+                    <span class="title-text">
+                        Vermicelli Cattery
+                    </span>
+                    <div class="line-title"></div>
+                </div>
+                <div class="slide-bar-top-content">
+                    <a href="https://www.facebook.com/nga.nguyen2303" class="text-decoration-none d-block text-light">
+                        <i class="fab fa-facebook-f fa-lg fa-fw p-1"></i>
+                        <span>Facebook</span>
+                    </a>
+
+
+                    <a href="tel:0989996916" class="text-decoration-none text-light">
+                        <i class="fa fa-phone fa-fw"></i>
+                        098 999 69 16
+                    </a>
+
+
+
+                    <a href="mailto:nga.nguyenthi2303@gmail.com" class="text-decoration-none text-light">
+                        <i class="fa fa-envelope fa-fw"></i>
+                        <span style="font-size: 14px;">nga.nguyenthi2303@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <div class="container my-5">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.7512041656073!2d105.76520141535481!3d21.042638692679326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134554c0f1b6cbb%3A0xf489e6e0c7437fe0!2sS3%20Goldmark%20city!5e0!3m2!1svi!2s!4v1633336767830!5m2!1svi!2s" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "300px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>

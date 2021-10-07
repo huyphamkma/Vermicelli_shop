@@ -167,6 +167,10 @@ html {
     padding: 22px 12px;
 }
 
+.fa-arrow-left:hover {
+    cursor: pointer;
+}
+
 .detail-cat-name{
     margin-bottom: 22px;
 }
@@ -175,11 +179,6 @@ html {
     font-weight: 800;
     /* font-size: 24px; */
 }
-
-.detail-cat-old{
-    margin-bottom: 12px;
-}
-
 
 #carouselIntro {
     /* background: #efefef !important; */
@@ -312,4 +311,25 @@ html {
 .closebtn {
     top: 10px !important;
     right: 250px !important;
+}
+
+
+.menu-slide {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 99;
+    padding: 10px 20px;
+    background-color: #e1e1e1;
+    opacity: 0.4;
+    border-radius: 2px;
+}
+
+.menu-slide:hover {
+    cursor: pointer;
+}
+
+.menu-icon {
+    font-size: 24px;
+    /* opacity: 1 !important; */
 }
